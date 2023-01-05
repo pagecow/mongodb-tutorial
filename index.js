@@ -10,7 +10,6 @@ const { MongoClient, ServerApiVersion } = require('mongodb');
 const uri = "mongodb+srv://yt-user:yt-user@ytexampledb.bngu6mg.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
-
 client.connect(async err => {
   const collection = client.db("testTwo").collection("sales");
   // perform actions on the collection object
@@ -52,8 +51,6 @@ client.connect(async err => {
 
   client.close();
 });
-
-
 
 // listener
 const server = http.createServer(app);
